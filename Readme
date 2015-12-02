@@ -1,0 +1,62 @@
+
+# 2015-11-24: chenqiu
+# Filename: CS_CmosSetting
+#           Add Serial Number to allcmos-org* and allcmos-cur* as SN-allcmos-org* and SN-allcmos-cur* 
+# 2015-11-24 liuhao14@lenovo.com
+# Filename : Mgmt_setup.sh
+#            Change the rules for get the CPOM / Rack number.
+#            Add the Data collect tools into our package.
+# 2015-11-20 liuhao14@lenovo.com
+# Filename : doxcat,dodiscovery,bmcsetup,Mgmt_setup
+#            Format the test log file , from NODE_MTM_SN to MTM_SN .
+# 2015-10-21 peterpeng
+# Filename : xcat_install_time.sh
+#            update the ntp timezone after system install to Asia/Shanghai  
+# 2015-10-21 liuhao14@lenovo.com
+# Filename : Mgmt_setup.sh
+#            Bug Fixed : 10xcat-cmdline.sh should be located in /opt/xcat/share/xcat/netboot/genesis/x86_64/fs/cmdline/
+# Filename : CS_FirmwareCheck
+#            Bug Fix :  Re-run CS_FirmwareCheck module again to check the FW flash result.
+#
+# 2015-10-19: liuhao14@lenovo.com
+# Filename : CS_NodeSetup
+#            ADD :  Add a message tag for POST window [ CS_FirmwareCheck  / CS_CmosSetting ]
+#
+# Filename : CS_FirmwareCheck
+#            Bug Fixed : Exit this CS_FirmwareCheck module , if can not found the FW version directory
+#
+# 2015-08-12: liuhao14@lenovo.com
+# Filename : xcat_install_time.sh
+#            new md5 values : 52725969ab2e6bc155fea7fc6dda209e  xcat_install_time.sh
+# 
+# 2015-08-11: liuhao14@lenovo.com
+# Filename : asu64
+#            update the asu tool ,use the new package listed in BestRecipe_15B : lnvgy_utl_asu_asut90f-10.1_linux_x86-64.tgz
+#            Version : Lenovo Advanced Settings Utility version 10.1.90F
+#
+# Filename : Mgmt_setup.sh
+#            Need to change some scripts to collect the timestamp , include : 10xcat-cmdline.sh bmcsetup dodiscovery doxcat xcat_install_time.sh
+#            Since above scripts is the exist xCAT module , when we try to exec Mgmt_setup.sh , it will copy current directory files to cover 
+#            the old files which was incoming with xCAT install , so pleace keep the latest files with Mgmt_setup.sh.
+#            Current md5 values :
+#            ecf861715d45179303cb46746592d268  doxcat
+#            f7c12907252a806ed41e2d2152ff2c04  dodiscovery
+#            dfcd59a0fbbf17a248bd87790e0d343c  bmcsetup
+#            0feda0b0ea1b082cd9762957a229c3c3  10xcat-cmdline.sh
+#            8b1b395131d6f1cd3e676fab66bd6bd9  xcat_install_time.sh
+# 
+# 2015-07-01: liuhao14@lenovo.com
+# 
+# Filename : Mgmt_setup.sh
+#            Change the log file name from hostname_MTM_SN.log to MTM_SN.log
+#            The first time with system boot up , the hostname will show as 'none'
+#            
+#
+# 2015-06-26: liuhao14@lenovo.com
+#
+# Filename : CS_FirmwareCheck
+# Function : Add a firmare flash module for IMM2/uEFI with iflash64
+#            the base flash process , without "--force" . So , the update 
+#            will ignore when the target version running at a higher level , 
+#            or if the target version the same as current version .
+
